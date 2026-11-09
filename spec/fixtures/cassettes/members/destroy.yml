@@ -1,0 +1,85 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.parakey.co/members/delete
+    body:
+      encoding: UTF-8
+      string: '{"filter":{"domainId":"[PARAKEY_DOMAIN_ID]","email":"test.member@example.com"}}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.3
+      Access-Token:
+      - "[PARAKEY_TOKEN]"
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Wed, 24 Jun 2026 05:06:04 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '34'
+      Connection:
+      - keep-alive
+      Api-Version:
+      - '3.0'
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';font-src ''self'' https: data:;form-action
+        ''self'';frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cross-Origin-Resource-Policy:
+      - same-origin
+      Etag:
+      - W/"22-QCjGT0qxEEeTOcZ3aV+cQRziFqA"
+      Nel:
+      - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Origin-Agent-Cluster:
+      - "?1"
+      Referrer-Policy:
+      - no-referrer
+      Report-To:
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=%2B3oc0wMOeNv%2BGj%2BC6BkOEibbtoc8s8BHpRvtHj3reF0%3D\u0026sid=812dcc77-0bd0-43b1-a5f1-b25750382959\u0026ts=1782277564"}],"max_age":3600}'
+      Reporting-Endpoints:
+      - heroku-nel="https://nel.heroku.com/reports?s=%2B3oc0wMOeNv%2BGj%2BC6BkOEibbtoc8s8BHpRvtHj3reF0%3D&sid=812dcc77-0bd0-43b1-a5f1-b25750382959&ts=1782277564"
+      Server:
+      - cloudflare
+      Server-Timing:
+      - total; dur=106.61609399999999; desc="Total Response Time"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Via:
+      - 2.0 heroku-router
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - e87ae2d0-64c9-d5bd-8cdf-a54b0b358719
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - a10933775b3ff5ed-NRT
+    body:
+      encoding: UTF-8
+      string: '{"id":"XNLgxEvDpf","deleted":true}'
+  recorded_at: Wed, 24 Jun 2026 05:06:04 GMT
+recorded_with: VCR 6.4.0

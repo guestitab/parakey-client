@@ -1,0 +1,86 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://api.parakey.co/access-keys
+    body:
+      encoding: UTF-8
+      string: '{"access":{"id":"hJ7Jt5aPIL"},"user":{"email":"codex-stargate-parakey-provider-success@example.com"}}'
+    headers:
+      User-Agent:
+      - Faraday v2.14.2
+      Access-Token:
+      - "[PARAKEY_TOKEN]"
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Jun 2026 05:25:39 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Api-Version:
+      - '3.0'
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';font-src ''self'' https: data:;form-action
+        ''self'';frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cross-Origin-Resource-Policy:
+      - same-origin
+      Etag:
+      - W/"27d-lt4h+FbAjNtDvjQPW5G8gi6Ev6Q"
+      Nel:
+      - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Origin-Agent-Cluster:
+      - "?1"
+      Referrer-Policy:
+      - no-referrer
+      Report-To:
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=wLXZiFgNyQTQVHaPa7BbDudLDHIXQMX7vxt4GOoKjFU%3D\u0026sid=812dcc77-0bd0-43b1-a5f1-b25750382959\u0026ts=1780550738"}],"max_age":3600}'
+      Reporting-Endpoints:
+      - heroku-nel="https://nel.heroku.com/reports?s=wLXZiFgNyQTQVHaPa7BbDudLDHIXQMX7vxt4GOoKjFU%3D&sid=812dcc77-0bd0-43b1-a5f1-b25750382959&ts=1780550738"
+      Server:
+      - cloudflare
+      Server-Timing:
+      - total; dur=367.764995; desc="Total Response Time"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Via:
+      - 2.0 heroku-router
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - 5b8e8c49-14cf-1239-2fd5-d48d147a9940
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - a06484a34e33fdd7-NRT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"id":"G8qgAQSP9s","startDate":"2026-06-04T05:25:39.295Z","apiEnabled":true,"origin":"api","enabled":true,"access":{"id":"hJ7Jt5aPIL","name":"Test
+        Access","enabled":true,"devices":[{"id":"ByWav6GJMS","bleName":"Tc8G"}],"settings":{"allowOverrideUnlockDuration":false,"mobileOwnerAuthentication":"none"}},"domain":{"id":"[PARAKEY_DOMAIN_ID]","name":"Guestit.se","disabledReasons":[]},"member":{"id":"lTGpC5NPM6"},"user":{"id":"wm7IPvtB61","email":"codex-stargate-parakey-provider-success@example.com"},"state":"original","accessScope":"internal","createdAt":"2026-06-04T05:25:39.295Z","createdBy":{"id":"gE8Eb6ZWd3"},"createdWithApi":true}'
+  recorded_at: Thu, 04 Jun 2026 05:25:39 GMT
+recorded_with: VCR 6.4.0

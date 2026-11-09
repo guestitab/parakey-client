@@ -1,0 +1,4 @@
+interface:
+  display_name: "Parakey"
+  short_description: "Parakey API behaviour"
+  default_prompt: "Use $parakey before changing an endpoint, pagination or event handling."

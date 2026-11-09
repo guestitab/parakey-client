@@ -1,0 +1,98 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.parakey.co/access-keys?domainId=[PARAKEY_DOMAIN_ID]&limit=5&page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v2.14.2
+      Access-Token:
+      - "[PARAKEY_TOKEN]"
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Thu, 04 Jun 2026 02:20:01 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Api-Version:
+      - '3.0'
+      Content-Security-Policy:
+      - 'default-src ''self'';base-uri ''self'';font-src ''self'' https: data:;form-action
+        ''self'';frame-ancestors ''self'';img-src ''self'' data:;object-src ''none'';script-src
+        ''self'';script-src-attr ''none'';style-src ''self'' https: ''unsafe-inline'';upgrade-insecure-requests'
+      Cross-Origin-Opener-Policy:
+      - same-origin
+      Cross-Origin-Resource-Policy:
+      - same-origin
+      Etag:
+      - W/"f9a-04VoomO+3VX6jeZGfStx04ZBHnw"
+      Nel:
+      - '{"report_to":"heroku-nel","response_headers":["Via"],"max_age":3600,"success_fraction":0.01,"failure_fraction":0.1}'
+      Origin-Agent-Cluster:
+      - "?1"
+      Referrer-Policy:
+      - no-referrer
+      Report-To:
+      - '{"group":"heroku-nel","endpoints":[{"url":"https://nel.heroku.com/reports?s=6be6z1ESIRGivKpmECTorrug3y7rcutNGQnZ%2Fvnz8ys%3D\u0026sid=812dcc77-0bd0-43b1-a5f1-b25750382959\u0026ts=1780539601"}],"max_age":3600}'
+      Reporting-Endpoints:
+      - heroku-nel="https://nel.heroku.com/reports?s=6be6z1ESIRGivKpmECTorrug3y7rcutNGQnZ%2Fvnz8ys%3D&sid=812dcc77-0bd0-43b1-a5f1-b25750382959&ts=1780539601"
+      Server:
+      - cloudflare
+      Server-Timing:
+      - total; dur=51.18672; desc="Total Response Time"
+      Strict-Transport-Security:
+      - max-age=15552000; includeSubDomains
+      Via:
+      - 2.0 heroku-router
+      X-Content-Type-Options:
+      - nosniff
+      X-Dns-Prefetch-Control:
+      - 'off'
+      X-Download-Options:
+      - noopen
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Permitted-Cross-Domain-Policies:
+      - none
+      X-Request-Id:
+      - 625a6952-b775-41fe-0c28-f618b3b4848e
+      X-Xss-Protection:
+      - '0'
+      Cf-Cache-Status:
+      - DYNAMIC
+      Cf-Ray:
+      - a06374b7cb6f737d-NRT
+    body:
+      encoding: ASCII-8BIT
+      string: '{"items":[{"id":"f163gXNFWc","startDate":"2024-03-30T17:20:54.821Z","apiEnabled":false,"origin":"portal","enabled":true,"access":{"id":"RyzEm42xit","name":"Test
+        Access 0","enabled":true,"devices":[{"id":"45DIYihqk5","bleName":"9EMJ"}],"settings":{"allowOverrideUnlockDuration":true,"mobileOwnerAuthentication":"none"}},"domain":{"id":"[PARAKEY_DOMAIN_ID]","name":"Guestit.se","disabledReasons":[]},"member":{"id":"El2k19eSmP"},"user":{"id":"uaJDF34Vbz","email":"test.user.0@example.com","name":"Test
+        User 0","deleted":false},"state":"original","accessScope":"internal","createdAt":"2024-03-30T17:20:54.821Z","createdBy":{"id":"uaJDF34Vbz","email":"test.creator.0@example.com","name":"Test
+        Creator 0","deleted":false},"createdWithApi":false,"outdated":false},{"id":"w4BeLWBfrU","startDate":"2025-05-08T08:51:01.908Z","expirationDate":"2028-05-08T08:50:24.111Z","apiEnabled":false,"origin":"portal","enabled":true,"access":{"id":"LVAPp9DTHW","name":"Test
+        Access 1","enabled":true,"devices":[{"id":"7eWB5uheK5","bleName":"xtlB"}],"settings":{"allowOverrideUnlockDuration":false,"mobileOwnerAuthentication":"none"}},"domain":{"id":"[PARAKEY_DOMAIN_ID]","name":"Guestit.se","disabledReasons":[]},"member":{"id":"7c3hKVCrso"},"user":{"id":"U0XRUxbRDp","email":"test.user.1@example.com","name":"Test
+        User 1","deleted":false},"state":"original","accessScope":"internal","createdAt":"2025-05-08T08:51:01.908Z","createdBy":{"id":"m2kJwbxPH2","email":"test.creator.1@example.com","name":"Test
+        Creator 1","deleted":true},"createdWithApi":false,"outdated":false},{"id":"TFXdcdpfUC","startDate":"2025-05-21T06:27:42.377Z","apiEnabled":false,"origin":"portal","enabled":true,"access":{"id":"LzSrOCWffT","name":"Test
+        Access 2","enabled":true,"devices":[{"id":"f698I4hxHR","bleName":"meT5"}],"settings":{"allowOverrideUnlockDuration":false,"mobileOwnerAuthentication":"none"}},"domain":{"id":"[PARAKEY_DOMAIN_ID]","name":"Guestit.se","disabledReasons":[]},"member":{"id":"9Whhqw1SDn"},"user":{"id":"FwW7kDGYDJ","email":"test.user.2@example.com","name":"Test
+        User 2","deleted":false},"state":"original","accessScope":"internal","createdAt":"2025-05-21T06:27:42.377Z","createdBy":{"id":"FwW7kDGYDJ","email":"test.creator.2@example.com","name":"Test
+        Creator 2","deleted":false},"createdWithApi":false,"outdated":false},{"id":"KkaJODprfp","startDate":"2025-05-21T09:25:58.820Z","expirationDate":"2030-05-21T09:25:42.167Z","apiEnabled":false,"origin":"portal","enabled":true,"access":{"id":"8TeRYYGel4","name":"Test
+        Access 3","enabled":true,"devices":[{"id":"8peHoqA7vE","bleName":"E30J"},{"id":"DC1kPNtVDn","bleName":"Eke1"}],"settings":{"allowOverrideUnlockDuration":false,"mobileOwnerAuthentication":"none"}},"domain":{"id":"[PARAKEY_DOMAIN_ID]","name":"Guestit.se","disabledReasons":[]},"member":{"id":"ImxQuOR6OR"},"user":{"id":"v7C5Ree0ns","email":"test.user.3@example.com","name":"Test
+        User 3","deleted":false},"state":"original","accessScope":"internal","createdAt":"2025-05-21T09:25:58.820Z","createdBy":{"id":"A3WXNrubrZ","email":"test.creator.3@example.com","name":"Test
+        Creator 3","deleted":false},"createdWithApi":false,"outdated":false},{"id":"StCnSnXTXO","startDate":"2025-05-21T09:25:58.853Z","expirationDate":"2030-05-21T09:25:42.167Z","apiEnabled":false,"origin":"portal","enabled":true,"access":{"id":"zk14xBh70c","name":"Test
+        Access 4","enabled":true,"devices":[{"id":"GbnKN4mNTB","bleName":"Edjt"},{"id":"DC1kPNtVDn","bleName":"Eke1"}],"settings":{"allowOverrideUnlockDuration":false,"mobileOwnerAuthentication":"none"}},"domain":{"id":"[PARAKEY_DOMAIN_ID]","name":"Guestit.se","disabledReasons":[]},"member":{"id":"ImxQuOR6OR"},"user":{"id":"v7C5Ree0ns","email":"test.user.4@example.com","name":"Test
+        User 4","deleted":false},"state":"original","accessScope":"internal","createdAt":"2025-05-21T09:25:58.853Z","createdBy":{"id":"A3WXNrubrZ","email":"test.creator.4@example.com","name":"Test
+        Creator 4","deleted":false},"createdWithApi":false,"outdated":false}],"metadata":{"totalItems":1729,"totalPages":346,"currentPage":1,"itemsPerPage":5}}'
+  recorded_at: Thu, 04 Jun 2026 02:20:01 GMT
+recorded_with: VCR 6.4.0

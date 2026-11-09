@@ -1,0 +1,4 @@
+interface:
+  display_name: "Write Provider"
+  short_description: "Add or change a Parakey endpoint in the gem"
+  default_prompt: "Use $write-provider to add or change a Parakey endpoint and its spec."

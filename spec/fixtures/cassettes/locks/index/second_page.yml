@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.parakey.co/devices?domainId=[PARAKEY_DOMAIN_ID]&limit=2&page=2
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Access-Token:
+      - "[PARAKEY_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"items":[{"id":"lock-3","name":"Side entrance","batteryStatus":"medium","batteryLastMeasuredAt":"2026-06-04T01:25:26.000Z","owner":{"id":"domain-3","name":"Building
+        B"},"category":"door"}]}'
+  recorded_at: Thu, 04 Jun 2026 00:00:00 GMT
+- request:
+    method: get
+    uri: https://api.parakey.co/accesses?allowedOrigins=api&deviceIds%5Bin%5D%5B0%5D=lock-3&domainId=[PARAKEY_DOMAIN_ID]&enabled=true&limit=500&page=1
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Access-Token:
+      - "[PARAKEY_TOKEN]"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+    body:
+      encoding: UTF-8
+      string: '{"items":[{"id":"access-lock-3","devices":[{"id":"lock-3","name":"Side
+        entrance"}]}],"metadata":{"totalPages":1}}'
+  recorded_at: Thu, 04 Jun 2026 00:00:00 GMT
+recorded_with: VCR 6.3.1
