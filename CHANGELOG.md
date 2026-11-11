@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [0.1.1] - 2026-11-11
+
 ### Changed
 
 - `Parakey::ArgumentError` messages are sentences the host can show as they are ("Access ID is required.") in
@@ -29,5 +31,6 @@ identifiers — this repo is public).
   - Members: `Index` with wire filters and `Destroy` by email.
   - `AccessEvents::Normalize` for event-log items and webhook deliveries.
 
-[Unreleased]: https://github.com/guestitab/parakey-client/compare/v0.1.0...staging
+[Unreleased]: https://github.com/guestitab/parakey-client/compare/v0.1.1...staging
+[0.1.1]: https://github.com/guestitab/parakey-client/compare/v0.1.0...v0.1.1
 [0.1.0]: https://github.com/guestitab/parakey-client/releases/tag/v0.1.0
