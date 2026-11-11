@@ -18,13 +18,13 @@ RSpec.describe Parakey::Members::Destroy do
   context 'with invalid arguments' do
     context 'when the email is blank' do
       let(:email) { nil }
-      let(:message) { 'email: required' }
+      let(:message) { 'Email is required.' }
 
       it_behaves_like 'failed call', failure_class: Parakey::ArgumentError
     end
 
     context 'when the domain_id is blank' do
-      let(:message) { 'domain_id: required' }
+      let(:message) { 'Domain ID is required.' }
 
       before { Parakey.config.domain_id = nil }
 

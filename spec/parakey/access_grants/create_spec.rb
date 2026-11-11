@@ -44,7 +44,7 @@ RSpec.describe Parakey::AccessGrants::Create do
   context 'with invalid arguments' do
     context 'when a regular grant has dates' do
       let(:start_date) { Time.zone.local(2026, 11, 1, 12) }
-      let(:message) { 'validity_window: invalid' }
+      let(:message) { 'A validity window is only supported for time-controlled grants.' }
 
       before { result }
 
@@ -53,7 +53,7 @@ RSpec.describe Parakey::AccessGrants::Create do
 
     context 'when a time-controlled grant has no dates' do
       let(:kind) { 'tca' }
-      let(:message) { 'validity_window: required' }
+      let(:message) { 'Start date and end date are both required.' }
 
       before { result }
 
@@ -64,7 +64,7 @@ RSpec.describe Parakey::AccessGrants::Create do
       let(:kind) { 'tca' }
       let(:start_date) { Time.zone.local(2026, 11, 2, 12) }
       let(:end_date) { Time.zone.local(2026, 11, 1, 12) }
-      let(:message) { 'end_date: invalid' }
+      let(:message) { 'End date must be after start date.' }
 
       before { result }
 
@@ -73,14 +73,14 @@ RSpec.describe Parakey::AccessGrants::Create do
 
     context 'when the access_id is blank' do
       let(:access_id) { nil }
-      let(:message) { 'access_id: required' }
+      let(:message) { 'Access ID is required.' }
 
       it_behaves_like 'failed call', failure_class: Parakey::ArgumentError
     end
 
     context 'when the recipient_email is blank' do
       let(:recipient_email) { nil }
-      let(:message) { 'recipient_email: required' }
+      let(:message) { 'Recipient email is required.' }
 
       it_behaves_like 'failed call', failure_class: Parakey::ArgumentError
     end

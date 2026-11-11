@@ -8,9 +8,9 @@ module Parakey
 
       # @rbs (attributes: ::Hash[::Symbol, untyped]) -> Dry::Monads::Result[::Hash[::Symbol, untyped]]
       def call(attributes:)
-        argument! access_id: :required if attributes[:access_id].blank?
-        argument! kind: :invalid unless KINDS.include?(attributes[:kind])
-        argument! recipient_email: :required if attributes[:recipient_email].blank?
+        argument! 'Access ID is required.' if attributes[:access_id].blank?
+        argument! 'Grant kind is invalid.' unless KINDS.include?(attributes[:kind])
+        argument! 'Recipient email is required.' if attributes[:recipient_email].blank?
 
         validate_validity_window!(attributes)
 
@@ -26,10 +26,10 @@ module Parakey
       # @rbs (::Hash[::Symbol, untyped] attributes) -> void
       def validate_validity_window!(attributes)
         if attributes[:kind] == KIND_TIME_CONTROLLED
-          argument! validity_window: :required if attributes[:start_date].blank? || attributes[:end_date].blank?
-          argument! end_date: :invalid if attributes[:start_date].in_time_zone >= attributes[:end_date].in_time_zone
+          argument! 'Start date and end date are both required.' if attributes[:start_date].blank? || attributes[:end_date].blank?
+          argument! 'End date must be after start date.' if attributes[:start_date].in_time_zone >= attributes[:end_date].in_time_zone
         elsif attributes[:start_date].present? || attributes[:end_date].present?
-          argument! validity_window: :invalid
+          argument! 'A validity window is only supported for time-controlled grants.'
         end
       end
 

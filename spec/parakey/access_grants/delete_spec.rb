@@ -19,7 +19,7 @@ RSpec.describe Parakey::AccessGrants::Delete do
   context 'with invalid arguments' do
     context 'when the external_id is blank' do
       let(:external_id) { nil }
-      let(:message) { 'external_id: required' }
+      let(:message) { 'External ID is required.' }
 
       it_behaves_like 'failed call', failure_class: Parakey::ArgumentError
     end

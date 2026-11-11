@@ -85,7 +85,7 @@ Lists page 1-based with `page` and `limit` on the wire; the operations take `ski
 
 | Class | Raised when |
 | --- | --- |
-| `Parakey::ArgumentError` | The arguments are unusable. Raised before any request. |
+| `Parakey::ArgumentError` | The arguments are unusable. Raised before any request, with a message the host can show as it is. |
 | `Parakey::ApiError` | Parakey answered with an error status. `#status` holds the HTTP status. |
 | `Parakey::Error` | The parent of the two above, also raised when no access token is configured. |
 

@@ -22,7 +22,7 @@ module Parakey
 
       # @rbs (attributes: ::Hash[::Symbol, untyped]) -> Dry::Monads::Result[::Hash[::Symbol, untyped]]
       def call(attributes:)
-        argument! access_id: :required if attributes[:access_id].blank?
+        argument! 'Access ID is required.' if attributes[:access_id].blank?
 
         body = Parakey.request(:post, 'access-keys', params: payload(attributes))
 
@@ -35,8 +35,8 @@ end
 
 - `#call` returns a `Dry::Monads::Result` and never raises; `#call!` unwraps and raises. Invoke with a fresh
   instance: `Op.new.call(...)` / `Op.new.call!(...)`.
-- Validate arguments up front with `argument!`, one guard per line, before any network call. Argument refusals
-  read as `"<key>: <reason>"`.
+- Validate arguments up front with `argument!`, one guard per line, before any network call. A refusal is a
+  sentence the host can show as it is.
 - `Parakey.request` owns the Faraday connection, retries, the `Access-Token` header and the `ApiError` wrap; an
   operation never builds its own client. A delete that tolerates a missing record passes
   `accepted_statuses: [404]`. A list operation takes `skip:` and `take:` and passes `page_params(skip, take)`, which
@@ -83,7 +83,7 @@ RSpec.describe Parakey::AccessGrants::Create do
   context 'with invalid arguments' do
     context 'when the access_id is blank' do
       let(:attributes) { super().merge(access_id: nil) }
-      let(:message) { 'access_id: required' }
+      let(:message) { 'Access ID is required.' }
 
       it_behaves_like 'failed call', failure_class: Parakey::ArgumentError
     end

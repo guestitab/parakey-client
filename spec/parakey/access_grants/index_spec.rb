@@ -35,7 +35,7 @@ RSpec.describe Parakey::AccessGrants::Index do
   context 'with invalid arguments' do
     context 'when take is not positive' do
       let(:args) { { take: 0 } }
-      let(:message) { 'take: invalid' }
+      let(:message) { 'Take must be a positive number.' }
 
       it_behaves_like 'failed call', failure_class: Parakey::ArgumentError
     end

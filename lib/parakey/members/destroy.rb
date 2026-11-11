@@ -7,8 +7,8 @@ module Parakey
 
       # @rbs (email: ::String?) -> Dry::Monads::Result[bool]
       def call(email:)
-        argument! email: :required if email.blank?
-        argument! domain_id: :required if Parakey.config.domain_id.blank?
+        argument! 'Email is required.' if email.blank?
+        argument! 'Domain ID is required.' if Parakey.config.domain_id.blank?
 
         filter = {
           domainId: Parakey.config.domain_id,

@@ -7,7 +7,7 @@ module Parakey
 
       # @rbs (attributes: ::Hash[::Symbol, untyped]) -> Dry::Monads::Result[bool]
       def call(attributes:)
-        argument! external_id: :required if attributes[:external_id].blank?
+        argument! 'External ID is required.' if attributes[:external_id].blank?
 
         path = "access-keys/#{ERB::Util.url_encode(attributes[:external_id])}"
         Parakey.request(:delete, path, accepted_statuses: [404])

@@ -11,7 +11,7 @@ module Parakey
 
       # @rbs (item: ::Hash[::Symbol, untyped]) -> Dry::Monads::Result[::Hash[::Symbol, untyped]]
       def call(item:)
-        argument! item: :required if item.blank?
+        argument! 'Event item is required.' if item.blank?
 
         Success(attributes(item))
       end

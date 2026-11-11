@@ -2,6 +2,11 @@
 
 ## [Unreleased]
 
+### Changed
+
+- `Parakey::ArgumentError` messages are sentences the host can show as they are ("Access ID is required.") in
+  place of `key: reason` pairs.
+
 ## [0.1.0] - 2026-11-10
 
 First release as `parakey-client`, extracted from the Parakey integration Guestit runs in production. The specs are

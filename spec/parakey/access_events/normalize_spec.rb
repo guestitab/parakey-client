@@ -45,7 +45,7 @@ RSpec.describe Parakey::AccessEvents::Normalize do
   context 'with invalid arguments' do
     context 'when the item is blank' do
       let(:item) { nil }
-      let(:message) { 'item: required' }
+      let(:message) { 'Event item is required.' }
 
       it_behaves_like 'failed call', failure_class: Parakey::ArgumentError
     end

@@ -25,15 +25,14 @@ module Parakey
 
     private
 
-    def argument!(**attrs)
-      key, reason = attrs.first
-      raise Parakey::ArgumentError, "#{key}: #{reason}"
+    def argument!(message)
+      raise Parakey::ArgumentError, message
     end
 
     # Lists page 1-based by page and limit on the wire; the operations take an item offset.
     # @rbs (::Integer skip, ::Integer take) -> ::Hash[::Symbol, untyped]
     def page_params(skip, take)
-      argument! take: :invalid unless take.to_i.positive?
+      argument! 'Take must be a positive number.' unless take.to_i.positive?
 
       {
         domainId: Parakey.config.domain_id,
